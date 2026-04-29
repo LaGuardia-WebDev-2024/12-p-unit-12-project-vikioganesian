@@ -26,12 +26,12 @@ Select ONE Additional Feature to Add
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        🎥 What is my favorite movie?
+        🥤 What is my favorite drink?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">Coke</option>
+          <option value="movie2">Monster</option>
+          <option value="movie3">Red Bull</option>
+          <option value="movie4">Celsius</option>
         </select>
       </label>
       <button type="submit">Check Your Answer</button>
@@ -43,12 +43,12 @@ Select ONE Additional Feature to Add
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 What is one of my favorite brands?
+       🧥 What is one of my favorite brands?
         <select id="book-answer">
           <option value="book1">book 1</option>
           <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book3">edikted</option>
+          <option value="book4">ann demeulemeester</option>
         </select>
       </label>
       <button type="submit">Check Your Answer</button>
@@ -66,11 +66,11 @@ Select ONE Additional Feature to Add
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
+        if (answer === "movie3") {
           $("#movie-text").text("YESSSS!");
         } 
         else {
-          $("#movie-text").text("Try Again!");
+          $("#movie-text").text("Noooo....Try Again!");
         }
       });
 
@@ -81,11 +81,11 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
+        if (answer === "book4") {
           $("#book-text").text("YESSSS!");
         } 
         else {
-          $("#book-text").text("Try Again!");
+          $("#book-text").text("Noooo....Try Again!");
         }
       });
       
