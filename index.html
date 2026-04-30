@@ -38,7 +38,9 @@ Select ONE Additional Feature to Add
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
-    </div>
+       <img id="noMovie" src="https://media.tenor.com/Or_pMDyHdygAAAAe/no-no-no-nope.png" width=" 200">
+    <img class="yesMovie" src="https://i.pinimg.com/originals/07/27/73/072773aa34bb00747cc6b5ef661a0bac.gif" width="200">
+      </div>
     <hr />
     <!-- Book Question -->
     <form id="book-form">
@@ -55,10 +57,15 @@ Select ONE Additional Feature to Add
     </form>
     <div id="book-result">
       <p id="book-text"></p>
+      
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       
+
+
+      $("#noMovie").hide()
+      $(".yesMovie").hide()
       //========================Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
@@ -68,9 +75,12 @@ Select ONE Additional Feature to Add
 
         if (answer === "movie3") {
           $("#movie-text").text("YESSSS!");
+          $(".yesMovie").show(2000);
+          $("#noMovie").hide(2000);
         } 
         else {
           $("#movie-text").text("Noooo....Try Again!");
+          $("#noMovie").show(2000);
         }
       });
 
