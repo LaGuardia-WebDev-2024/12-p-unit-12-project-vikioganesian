@@ -57,7 +57,8 @@ Select ONE Additional Feature to Add
     </form>
     <div id="book-result">
       <p id="book-text"></p>
-      
+      <img id="yesbook" src="https://i.pinimg.com/originals/13/de/55/13de5511b65ec28d4501d0962a388969.gif" width="200">
+       <img id="nobook" src="https://media.tenor.com/Or_pMDyHdygAAAAe/no-no-no-nope.png" width=" 200">
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
@@ -75,15 +76,26 @@ Select ONE Additional Feature to Add
 
         if (answer === "movie3") {
           $("#movie-text").text("YESSSS!");
-          $(".yesMovie").show(2000);
+          $(".yesMovie").fadeIn(2000);
           $("#noMovie").hide(2000);
-        } 
+          }
+        
+         
         else {
           $("#movie-text").text("Noooo....Try Again!");
-          $("#noMovie").show(2000);
+         
+             $(".yesMovie").hide(2000);
+            
+              $("#noMovie").show(1500).animate({
+            rotate: "95deg",
+          }, 1000)
+
         }
       });
 
+
+      $("#nobook").hide()
+      $("#yesbook").hide()
       //=======================Book Question jQuery Code
       $("#book-form").on("submit", function (event) {
         event.preventDefault();
@@ -93,9 +105,15 @@ Select ONE Additional Feature to Add
 
         if (answer === "book4") {
           $("#book-text").text("YESSSS!");
+              $("#yesbook").fadeIn(2000);
+                $("#nobook").hide(2000)
         } 
         else {
           $("#book-text").text("Noooo....Try Again!");
+              $("#nobook").show(1500).animate({
+            rotate: "95deg",
+          }, 1000)
+             $("#yesbook").hide(2000);
         }
       });
       
